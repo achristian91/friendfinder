@@ -83,16 +83,16 @@ var friends = [
         name: "Suzie",
         photo: "https://pbs.twimg.com/profile_images/992441985884602368/yYzAu0mW_400x400.jpg",
         scores: [
-        "4",
-        "2",
-        "4",
-        "3",
         "1",
-        "2",
-        "3",
-        "5",
         "1",
-        "2"
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
       ]   
      }
 

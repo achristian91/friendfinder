@@ -3,11 +3,18 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Arthur's Friend Finder</title>
+  <title>Arthur's Friend Finder Survey Page</title>
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+    
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
 </head>
 
 <body>
@@ -40,7 +47,7 @@
     <h4>When new friends appear into your life, you are always friendly.</h4>
     <select data-placeholder="" class="chosen-select" id="q2">
       <option value=""></option>
-      <option value="1">1(Strongly Disagree</option>
+      <option value="1"> 1(Strongly Disagree</option>
       <option value="2">2</option>
       <option value="3">3</option>
       <option value="4">4</option>
@@ -51,7 +58,7 @@
     <h4>When friends come to you for their problems, you tend to listen.</h4>
     <select data-placeholder="" class="chosen-select" id="q3">
       <option value=""></option>
-      <option value="1">1(Strongly Disagree</option>
+      <option value="1">1 (Strongly Disagree</option>
       <option value="2">2</option>
       <option value="3">3</option>
       <option value="4">4</option>
@@ -62,7 +69,7 @@
     <h4>You value honesty over compasion in a friend.</h4>
     <select data-placeholder="" class="chosen-select" id="q4">
       <option value=""></option>
-      <option value="1">1(Strongly Disagree</option>
+      <option value="1">1 (Strongly Disagree</option>
       <option value="2">2</option>
       <option value="3">3</option>
       <option value="4">4</option>
@@ -73,7 +80,7 @@
     <h4>You believe friends should always have your back no matter what.</h4>
     <select data-placeholder="" class="chosen-select" id="q5">
       <option value=""></option>
-      <option value="1">1(Strongly Disagree</option>
+      <option value="1">1 (Strongly Disagree</option>
       <option value="2">2</option>
       <option value="3">3</option>
       <option value="4">4</option>
@@ -84,7 +91,7 @@
     <h4>When new friends come into your life, you become very friendly and accepting.</h4>
     <select data-placeholder="" class="chosen-select" id="q6">
       <option value=""></option>
-      <option value="1">1(Strongly Disagree</option>
+      <option value="1">1 (Strongly Disagree</option>
       <option value="2">2</option>
       <option value="3">3</option>
       <option value="4">4</option>
@@ -95,7 +102,7 @@
     <h4>Telling a firend they are doing something wrong shows true friendship.</h4>
     <select data-placeholder="" class="chosen-select" id="q7">
       <option value=""></option>
-      <option value="1">1(Strongly Disagree</option>
+      <option value="1">1 (Strongly Disagree</option>
       <option value="2">2</option>
       <option value="3">3</option>
       <option value="4">4</option>
@@ -106,7 +113,7 @@
     <h4>Being honest with a friend is not always the best thing to do.</h4>
     <select data-placeholder="" class="chosen-select" id="q8">
       <option value=""></option>
-      <option value="1">1(Strongly Disagree</option>
+      <option value="1">1 (Strongly Disagree</option>
       <option value="2">2</option>
       <option value="3">3</option>
       <option value="4">4</option>
@@ -117,7 +124,7 @@
     <h4>You have trouble trusting people.</h4>
     <select data-placeholder="" class="chosen-select" id="q9">
       <option value=""></option>
-      <option value="1">1(Strongly Disagree</option>
+      <option value="1">1 (Strongly Disagree</option>
       <option value="2">2</option>
       <option value="3">3</option>
       <option value="4">4</option>
@@ -128,7 +135,7 @@
     <h4>You love being the center of attention.</h4>
     <select data-placeholder="" class="chosen-select" id="q10">
       <option value=""></option>
-      <option value="1">1(Strongly Disagree</option>
+      <option value="1">1 (Strongly Disagree</option>
       <option value="2">2</option>
       <option value="3">3</option>
       <option value="4">4</option>
@@ -139,7 +146,7 @@
     <br>
 
     <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle"
-        aira-hidden="true"></i>Submit</button>
+        aria-hidden="true"></i>Submit</button>
 
     <hr>
 
@@ -157,10 +164,12 @@
 
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <button type="button" class="close" data-dismiss="modal">
+            <span aria-hidden="true">&times;</span>
+          </button>
           <h2 class="modal-title"><strong>Best Match</strong></h2>
         </div>
-        <div class="modeal body">
+        <div class="modal-body">
           <h2 id="matchName"></h2>
           <img id="matchImg" src="https://media.altpress.com/uploads/2018/06/Hey_Arnold_-_News_717-463-2.jpg" alt="">
         </div>
@@ -195,6 +204,11 @@
             isValid = false;
           }
         });
+        $(".chosen-select").each(function () {
+          if ($(this).val() === "") {
+            isValid = false;
+          }
+        });
         return isValid;
       }
 
@@ -212,23 +226,23 @@
             $("#q7").val(),
             $("#q8").val(),
             $("#q9").val(),
-            $("#q10").val(),
+            $("#q10").val()
           ]
         };
-      var currentURL = window.location.origin;
+        var currentURL = window.location.origin;
 
-      $.post(currentURL + "/api/friends", userData, function(data) {
-        
-        $("#resultsModal").modal("toggle");
-      
-      });
-    }
-    else{
-      alert("Pleasec fill out all fields before submitting!");
-    }
+        $.post(currentURL + "/api/friends", userData, function (data) {
 
-    return false;
-  });
+          $("#resultsModal").modal("toggle");
+
+        });
+      }
+      else {
+        alert("Please fill out all fields before submitting!");
+      }
+
+      return false;
+    });
 
   </script>
 
