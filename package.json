@@ -18,8 +18,11 @@
   },
   "homepage": "https://github.com/achristian91/friendfinder#readme",
   "dependencies": {
+    "body": "^5.1.0",
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
+    "parser": "^0.1.4",
+    "path": "^0.12.7",
     "sav": "^1.0.42"
   }
 }
