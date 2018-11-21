@@ -4,15 +4,15 @@ var friends = [
         photo: "https://media.altpress.com/uploads/2018/06/Hey_Arnold_-_News_717-463-2.jpg",
         scores: [
         "2",
-        "1",
-        "5",
         "2",
-        "4",
-        "3",
-        "1",
         "2",
-        "4",
-        "5"
+        "2",
+        "2",
+        "2",
+        "2",
+        "2",
+        "2",
+        "2"
       ]   
      },
      {
