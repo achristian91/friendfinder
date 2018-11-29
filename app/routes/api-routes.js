@@ -11,7 +11,7 @@ module.exports = function(app) {
         var bestMatch = {
             name: "",
             photo: "",
-            friendDifferences: 1000
+            friendDifference: 1000
         };
 
         console.log(req.body);
@@ -34,15 +34,15 @@ module.exports = function(app) {
 
                 totalDifference += Math.abs(parseInt(userScores[j]) - parseInt(friends[i].scores[j]));
 
-                if (totalDifference <= bestMatch.friendDifferences) {
+                if (totalDifference <= bestMatch.friendDifference) {
                     // reset match
                     bestMatch.name = friends[i].name;
                     bestMatch.photo = friends[i].photo;
-                    bestMatch.friendDifferences = totalDifference;
+                    bestMatch.friendDifference = totalDifference;
                 }
             }
         }
-        // Saves User data to the data base 
+        // Saves User data to the database 
         friends.push(userData);
 
         // Return a JSON with the user match 

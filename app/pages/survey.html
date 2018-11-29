@@ -5,11 +5,13 @@
   <meta charset="UTF-8">
   <title>Arthur's Friend Finder Survey Page</title>
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery.js"></script>
+<!--JS and CSS-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
@@ -98,7 +100,7 @@
     </select>
 
     <h3><strong>Question 7</strong></h3>
-    <h4>Telling a firend they are doing something wrong shows true friendship.</h4>
+    <h4>Telling a friend they are doing something wrong shows true friendship.</h4>
     <select data-placeholder="" class="chosen-select" id="q7">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree</option>
@@ -144,7 +146,7 @@
     <br>
     <br>
 
-    <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle"
+    <button type="submit" data-toggle="modal" data-target="#resultModal" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle"
         aria-hidden="true"></i>Submit</button>
 
     <hr>
@@ -157,23 +159,23 @@
 
   </div>
 
-  <div id="resultsModal" class="modal fade"  tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
+  <div id="resultModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title">Best Match</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h2 class="modal-title"><strong>Best Match</strong></h2>
         </div>
         <div class="modal-body">
-          <p>Modal body text goes here.</p>
+          <h2 id="matchName"></h2>
+          <img id="matchImg" src="https://vignette.wikia.nocookie.net/p__/images/c/c6/Tommy_Pickles.jpg/revision/latest?cb=20111127000312&path-prefix=protagonist" alt="">
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary">Save changes</button>
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
+
     </div>
   </div>
 
@@ -228,11 +230,12 @@
         var currentURL = window.location.origin;
 
         $.post(currentURL + "/api/friends", userData, function(data) {
+          
+          
+          $("#matchName").text(data.name);
+          $("#matchImg").attr("src", data.photo);
 
-          // $("#matchName").text(data.name);
-          // $("#matchImg").attr("src", data.photo);
-
-          $("#resultsModal").modal("toggle");
+          $("#resultModal").modal("show");
         
         });
       }
@@ -244,6 +247,9 @@
     });
 
   </script>
+
+<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+
 
 </body>
 
