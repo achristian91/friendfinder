@@ -1,7 +1,7 @@
 {
   "name": "friendfinder",
   "version": "1.0.0",
-  "description": "### Overview",
+  "description": "node friend app",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -20,7 +20,6 @@
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
-    "path": "^0.12.7",
-    "require": "^2.4.20"
+    "path": "^0.12.7"
   }
 }
