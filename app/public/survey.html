@@ -1,22 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<header>
   <meta charset="UTF-8">
   <title>Arthur's Friend Finder Survey Page</title>
 
-<!--JS and CSS-->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <!--JS and CSS-->
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+    integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+    integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
 
-</head>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
+
+</header>
 
 <body>
 
@@ -67,7 +74,7 @@
     </select>
 
     <h3><strong>Question 4</strong></h3>
-    <h4>You value honesty over compasion in a friend.</h4>
+    <h4>You value honesty over compassion in a friend.</h4>
     <select data-placeholder="" class="chosen-select" id="q4">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree</option>
@@ -146,8 +153,8 @@
     <br>
     <br>
 
-    <button type="submit" data-toggle="modal" data-target="#resultModal" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle"
-        aria-hidden="true"></i>Submit</button>
+    <button type="submit" data-toggle="modal" class="btn btn-primary btn-lg btn-block" id="submit"><i
+        class="fa fa-check-circle" aria-hidden="true"></i>Submit</button>
 
     <hr>
 
@@ -159,17 +166,16 @@
 
   </div>
 
-  <div id="resultModal" class="modal fade" role="dialog">
+  <div id="resultsModal" class="modal fade" role="dialog">
     <div class="modal-dialog">
 
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h2 class="modal-title"><strong>Best Match</strong></h2>
         </div>
         <div class="modal-body">
           <h2 id="matchName"></h2>
-          <img id="matchImg" src="https://vignette.wikia.nocookie.net/p__/images/c/c6/Tommy_Pickles.jpg/revision/latest?cb=20111127000312&path-prefix=protagonist" alt="">
+          <img id="matchImg" src="https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750__480.jpg" alt="">
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -229,14 +235,14 @@
         };
         var currentURL = window.location.origin;
 
-        $.post(currentURL + "/api/friends", userData, function(data) {
-          
-          
+        $.post(currentURL + "/api/friends", userData, function (data) {
+
+
           $("#matchName").text(data.name);
           $("#matchImg").attr("src", data.photo);
 
-          $("#resultModal").modal("show");
-        
+          $('#resultsModal').modal('show');
+
         });
       }
       else {
@@ -248,7 +254,6 @@
 
   </script>
 
-<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
 
 
 </body>

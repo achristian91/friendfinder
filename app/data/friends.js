@@ -17,7 +17,7 @@ var friends = [
      },
      {
         name: "Tommy",
-        photo: "https://vignette.wikia.nocookie.net/p__/images/c/c6/Tommy_Pickles.jpg/revision/latest?cb=20111127000312&path-prefix=protagonist",
+        photo: "https://i.pinimg.com/originals/4c/30/4b/4c304b40f98139b07ecf0bfe83a89e73.jpg",
         scores: [
         "3",
         "5",
@@ -32,8 +32,8 @@ var friends = [
       ]   
      },
      {
-        name: "ED",
-        photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6KlPH3jRZNaK73kyhXbxaqlewRKfQRM6kVFbT476Yvk0ucjFW",
+        name: "Chucky",
+        photo: "https://vignette.wikia.nocookie.net/cartoonica/images/b/b6/Chuckie.jpg/revision/latest?cb=20110424050627",
         scores: [
         "2",
         "1",
@@ -48,8 +48,8 @@ var friends = [
       ]   
      },
      {
-        name: "Eddy",
-        photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcwnMTu8TvYUZQ30__dwQ03OC9BI2-vuSZU9mn4tRjVWsPFpRS",
+        name: "Dill",
+        photo: "https://i.pinimg.com/236x/31/03/f9/3103f90e260ead5b363eee0fa9bce8fa--dil-rugrats.jpg",
         scores: [
         "5",
         "1",
@@ -65,7 +65,7 @@ var friends = [
      },
      {
         name: "Angelica",
-        photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhRjT-N59KnhAJ-4tLdQKnCpVQsZ81CJ7Ulxf5UQOrMqbSp0mR",
+        photo: "https://i.pinimg.com/originals/87/db/cb/87dbcbb8b6f954bd86ad7e9ed855488c.jpg",
         scores: [
         "2",
         "5",
@@ -81,7 +81,7 @@ var friends = [
      },
      {
         name: "Suzie",
-        photo: "https://pbs.twimg.com/profile_images/992441985884602368/yYzAu0mW_400x400.jpg",
+        photo: "https://costumewall.com/wp-content/uploads/2018/09/susy-carmichael.jpg",
         scores: [
         "1",
         "1",
