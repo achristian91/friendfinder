@@ -6,6 +6,6 @@ Full-stack site that will take in results from users' surveys, then compare thei
 
 ### https://artfriendfinder91.herokuapp.com/
 
-!(https://github.com/achristian91/friendfinder/blob/master/app/public/screenshots/screenshot1.jpg)
+![screen1](https://github.com/achristian91/friendfinder/blob/master/app/public/screenshots/screenshot1.jpg)
 
-!(https://github.com/achristian91/friendfinder/blob/master/app/public/screenshots/screenshot2.jpg)
+![screen2](https://github.com/achristian91/friendfinder/blob/master/app/public/screenshots/screenshot2.jpg)
